@@ -1,28 +1,33 @@
-from flask import Flask, jsonify, request
-from flask_restful import Api, Resource
-from flask_cors import CORS
-from web.customers import hello, Customer, Detail, Del
-from custome_daidien import NDD, NDD_moi, Del_NDD
-
-app = Flask(__name__)
-api = Api(app)
-
-
-api.add_resource(Customer, '/khach-hang')
-api.add_resource(Detail, '/khach-hang/chi-tiet/<id>')
-api.add_resource(Del, '/khach-hang/xoa/<id>')
-api.add_resource(NDD, '/khach-hang/dai-dien/<id>')
-api.add_resource(Del_NDD, '/khach-hang/dai-dien/xoa/<id>')
-api.add_resource(NDD_moi, '/khach-hang/dai-dien-moi/<id>')
-api.add_resource(hello, '/')
+# from flask import Flask, jsonify, request
+# from flask_restful import Api, Resource
+# from flask_cors import CORS
+# from web.customers import hello, Customer, Detail, Del
+# from custome_daidien import NDD, NDD_moi, Del_NDD
+#
+# app = Flask(__name__)
+# api = Api(app)
+#
+#
+#
+# api.add_resource(Customer, '/khach-hang')
+# api.add_resource(Detail, '/khach-hang/chi-tiet/<id>')
+# api.add_resource(Del, '/khach-hang/xoa/<id>')
+# api.add_resource(NDD, '/khach-hang/dai-dien/<id>')
+# api.add_resource(Del_NDD, '/khach-hang/dai-dien/xoa/<id>')
+# api.add_resource(NDD_moi, '/khach-hang/dai-dien-moi/<id>')
+# api.add_resource(hello, '/')
 # api.add_resource(License.post, '/ban-quyen/them-moi')
 # api.add_resource(Register, '/register')
 # api.add_resource(Retrieve, '/retrieve')
 # api.add_resource(Save, '/save')
 
-CORS(app)
-if __name__ == "__main__":
-    app.run(host='0.0.0.0', debug=True)
+
+from flask import Flask
+app = Flask(__name__)
+
+@app.route("/")
+def hello():
+    return "Hello, World!"
 
 # client = MongoClient("mongodb://localhost:27017")
 # db = client.ByteSave_Licenses
