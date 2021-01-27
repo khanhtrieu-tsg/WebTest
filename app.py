@@ -1,4 +1,4 @@
-import pyodbc
+# import pyodbc
 from flask_sqlalchemy import SQLAlchemy
 from flask import Flask, render_template, jsonify
 import urllib.parse
