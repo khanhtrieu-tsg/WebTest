@@ -44,11 +44,11 @@ SELECT * FROM companys
 def home():
     try:
         # a = db.metadata['table']['companys']
-        cursor = cnxn.cursor()
-        cursor.execute(q)
-        row = cursor.fetchone()
-        a = row.namecompany
-        return render_template('home.html',content=row,mes='Kết nối đến DB thành công')
+        # cursor = cnxn.cursor()
+        # cursor.execute(q)
+        # row = cursor.fetchone()
+        # a = row.namecompany
+        return render_template('home.html',mes='Kết nối đến DB thành công')
     except Exception as e:
         return render_template('home.html', content=[],err='Chưa kết nối đến DB')
 
