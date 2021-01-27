@@ -43,7 +43,6 @@ SELECT * FROM companys
 @app.route('/')
 def home():
     try:
-
         cursor = cnxn.cursor()
         cursor.execute(q)
         row = cursor.fetchone()
