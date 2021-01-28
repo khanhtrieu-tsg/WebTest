@@ -35,10 +35,10 @@ class companys(db.Model):
 
 class comments(db.Model):
     id = db.Column('id', db.Integer, primary_key=True)
-    body = db.Column(db.String(100))
-    customer = db.Column(db.String(50))
-    address = db.Column(db.String(200))
-    email = db.Column(db.String(10))
+    body = db.Column(db.String(250))
+    customer = db.Column(db.String(250))
+    address = db.Column(db.String(250))
+    email = db.Column(db.String(250))
 
 
 engine = create_engine("mssql+pyodbc:///?odbc_connect=%s" % params)
