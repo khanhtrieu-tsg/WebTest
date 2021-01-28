@@ -40,6 +40,23 @@ class comments(db.Model):
     address = db.Column(db.String(250))
     email = db.Column(db.String(250))
 
+class books(db.Model):
+    id = db.Column('id', db.Integer, primary_key=True)
+    name = db.Column(db.String(250))
+    author = db.Column(db.String(250))
+    yearmanufacture = db.Column(db.String(250))
+    image = db.Column(db.String(250))
+    quantity = db.Column(db.String(250))
+    amount = db.Column(db.String(250))
+
+class loggig(db.Model):
+    id = db.Column('id', db.Integer, primary_key=True)
+    username = db.Column(db.String(250))
+    psw = db.Column(db.String(250))
+    type = db.Column(db.String(250))
+    email = db.Column(db.String(250))
+
+
 
 engine = create_engine("mssql+pyodbc:///?odbc_connect=%s" % params)
 
