@@ -7,9 +7,9 @@ import urllib.parse
 from sqlalchemy import *
 
 params = urllib.parse.quote_plus(
-    "DRIVER={ODBC Driver 17 for SQL Server};SERVER=ngocnghiademo.database.windows.net;DATABASE=ngocnghiademo;UID=ngocnghia;PWD=123456789aA@")
+    "DRIVER={ODBC Driver 17 for SQL Server};SERVER=ngocnghiademo.database.windows.net;DATABASE=webdemo;UID=ngocnghia;PWD=123456789aA@")
 cnxn = pyodbc.connect(
-    "Driver={ODBC Driver 17 for SQL Server};Server=ngocnghiademo.database.windows.net,1433;Database=ngocnghiademo;Uid=ngocnghia;Pwd=123456789aA@;Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;")
+    "Driver={ODBC Driver 17 for SQL Server};Server=ngocnghiademo.database.windows.net,1433;Database=webdemo;Uid=ngocnghia;Pwd=123456789aA@;Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;")
 
 app = Flask(__name__, static_folder='static')
 
