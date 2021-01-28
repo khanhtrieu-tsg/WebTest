@@ -2008,12 +2008,13 @@
             <div class="w3-container">
                 <form id="formcreatecoment" name="formcreatecoment">
                     {#                    {% csrf_token %}#}
-                    <textarea rows='5' cols="5" style="width: 100%" name="comment"
+                    <textarea rows='5' cols="5" style="width: 100%;height: 200px" name="comment"
                               placeholder="Please let us know what you think!"></textarea>
                 </form>
 
             </div>
-            <footer class="w3-container w3-teal">
+            <footer class="w3-container w3-teal" style="    text-align: end;
+    padding-top: 5px;padding-bottom: 5px;">
                 <button class="btn btn-primary" onclick="add_comment()">Send</button>
             </footer>
         </div>
